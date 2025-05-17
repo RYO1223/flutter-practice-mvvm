@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_mvvm/ui/core/themes/theme.dart';
-import 'ui/home/home_screen.dart';
 
 import 'main_development.dart' as development;
+import 'ui/home/home_screen.dart';
 
 void main() {
   // Launch development config by default
