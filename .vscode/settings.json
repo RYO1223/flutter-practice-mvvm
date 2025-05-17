@@ -1,7 +1,10 @@
 {
   "dart.flutterSdkPath": ".fvm/versions/3.29.3",
   "cSpell.words": [
+    "buildlog",
     "cupertino",
-    "mvvm"
+    "mvvm",
+    "swiftpm",
+    "Symbolication"
   ]
 }

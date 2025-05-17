@@ -10,4 +10,4 @@ analyzer:
 
 dart_code_metrics:
   extends:
-    - package:dart_code_metrics_presets/all.yaml
+    - recommended

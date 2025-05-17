@@ -10,11 +10,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
+  var _counter = 0;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _counter = _counter + 1;
     });
   }
 
@@ -22,13 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
