@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  dart_code_metrics_presets:
+    dependency: "direct dev"
+    description:
+      name: dart_code_metrics_presets
+      sha256: "30b7bcaec9de4e8c5f7a41eea7f8e2fa52ad30729f4435a3b4fcf460abb327fe"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.22.0"
   fake_async:
     dependency: transitive
     description:
@@ -139,6 +147,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  pedantic_mono:
+    dependency: "direct dev"
+    description:
+      name: pedantic_mono
+      sha256: b032d4ba3f702a72d8c9a9084d1d1db917b2c072eb71ab4e85ebb0257a219674
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.30.3"
   sky_engine:
     dependency: transitive
     description: flutter
