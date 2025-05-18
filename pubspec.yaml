@@ -1,6 +1,6 @@
 name: flutter_practice_mvvm
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -11,31 +11,40 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.8
+  # Architecture
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
   freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
-  retrofit: ^4.4.2
-  logger: ^2.5.0
+
+  # Networking
   dio: ^5.8.0+1
+  retrofit: ^4.4.2
+
+  # Misc
+  cupertino_icons: ^1.0.8
+  logger: ^2.5.0
   easy_localization: ^3.0.7+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^5.0.0
+  # Flavor
+  flutter_flavorizr: ^2.4.0
+
+  # Analysis
   pedantic_mono: ^1.30.3
-  riverpod_generator: ^2.6.5
-  build_runner: ^2.4.15
   custom_lint: ^0.7.5
   riverpod_lint: ^2.6.5
+  dart_code_metrics_presets: ^2.22.0
+
+  # Build Runner
+  build_runner: ^2.4.15
+  riverpod_generator: ^2.6.5
   freezed: ^3.0.6
   json_serializable: ^6.9.5
   retrofit_generator: ^9.2.0
-  flutter_flavorizr: ^2.4.0
-  dart_code_metrics_presets: ^2.22.0
 
 flutter:
   uses-material-design: true
