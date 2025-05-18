@@ -6,5 +6,10 @@
     "mvvm",
     "swiftpm",
     "Symbolication"
-  ]
+  ],
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+    }
 }

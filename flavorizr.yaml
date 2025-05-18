@@ -1,0 +1,22 @@
+flavors:
+  dev:
+    app:
+      name: "MVVM Dev"
+    android:
+      applicationId: "com.example.flutter_practice_mvvm.dev"
+    ios:
+      bundleId: "com.example.flutter_practice_mvvm.dev"
+  stg:
+    app:
+      name: "MVVM Stg"
+    android:
+      applicationId: "com.example.flutter_practice_mvvm.stg"
+    ios:
+      bundleId: "com.example.flutter_practice_mvvm.stg"
+  prod:
+    app:
+      name: "MVVM"
+    android:
+      applicationId: "com.example.flutter_practice_mvvm.prod"
+    ios:
+      bundleId: "com.example.flutter_practice_mvvm.prod"
