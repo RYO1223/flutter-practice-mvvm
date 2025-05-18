@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart'
+    show BuildContextEasyLocalizationExtension;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_mvvm/ui/core/themes/app_theme.dart';
@@ -11,6 +13,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       title: F.title,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
