@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice_mvvm/ui/news/news_screen.dart';
+import 'package:flutter_practice_mvvm/ui/news/news_page.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key, required this.title});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key, required this.title});
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const NewsScreen(),
+      body: const NewsPage(),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: 'News'),

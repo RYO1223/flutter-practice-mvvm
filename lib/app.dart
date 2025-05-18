@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart'
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_mvvm/ui/core/themes/app_theme.dart';
-import 'package:flutter_practice_mvvm/ui/home/home_screen.dart';
+import 'package:flutter_practice_mvvm/ui/home/home_page.dart';
 
 import 'utils/flavor.dart';
 
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       home: _flavorBanner(
-        child: const HomeScreen(title: 'Flutter Demo Home Page'),
+        child: const HomePage(title: 'Flutter Demo Home Page'),
         // ignore: avoid_redundant_argument_values
         show: kDebugMode,
       ),
