@@ -2,7 +2,7 @@ include: package:pedantic_mono/analysis_options.yaml
 
 linter:
   rules:
-    - sort_pub_dependencies: false
+    sort_pub_dependencies: false
 
 analyzer:
   plugins:
@@ -17,5 +17,10 @@ analyzer:
 dart_code_metrics:
   extends:
     - recommended
+    - package:dart_code_metrics_presets/riverpod.yaml
+    - package:dart_code_metrics_presets/firebase_analytics.yaml
+    - package:dart_code_metrics_presets/easy_localization.yaml
+    - package:dart_code_metrics_presets/pub.yaml
+    - package:dart_code_metrics_presets/metrics_recommended.yaml
   rules:
     - unnecessary-trailing-comma: false

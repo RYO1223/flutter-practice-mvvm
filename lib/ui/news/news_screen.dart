@@ -21,7 +21,6 @@ class _NewsScreenState extends ConsumerState<NewsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final newsViewModel = ref.watch(newsViewModelProvider.notifier);
     final newsScreenState = ref.watch(newsViewModelProvider);
 
     return Scaffold(

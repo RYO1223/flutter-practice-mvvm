@@ -15,7 +15,8 @@ class App extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       home: _flavorBanner(
-        child: HomeScreen(title: 'Flutter Demo Home Page'),
+        child: const HomeScreen(title: 'Flutter Demo Home Page'),
+        // ignore: avoid_redundant_argument_values
         show: kDebugMode,
       ),
     );
@@ -27,10 +28,10 @@ class App extends StatelessWidget {
             location: BannerLocation.topStart,
             message: F.name,
             color: Colors.green.withAlpha(150),
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               fontWeight: FontWeight.w700,
-              fontSize: 12.0,
-              letterSpacing: 1.0,
+              fontSize: 12,
+              letterSpacing: 1,
             ),
             textDirection: TextDirection.ltr,
             child: child,
