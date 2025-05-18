@@ -17,7 +17,11 @@ format-analyze:
 
 .PHONY: build-runner
 build-runner:
-	flutter packages pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build -d
+
+.PHONY: watch
+watch:
+	dart run build_runner watch -d
 
 .PHONY: localization
 localization:
