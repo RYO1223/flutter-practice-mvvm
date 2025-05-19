@@ -21,7 +21,7 @@ void main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en', 'US'),
         assetLoader: const CodegenLoader(),
-        child: const App(),
+        child: App(),
       ),
     ),
   );
