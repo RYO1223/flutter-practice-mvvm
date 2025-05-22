@@ -4,5 +4,14 @@ import 'package:flutter_practice_mvvm/routing/app_router.gr.dart';
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {
   @override
-  List<AutoRoute> get routes => [AutoRoute(page: HomeRoute.page, path: '/')];
+  List<AutoRoute> get routes => [
+    AutoRoute(
+      path: '/',
+      page: HomeRoute.page,
+      children: [
+        AutoRoute(path: 'news', page: NewsRoute.page),
+        AutoRoute(path: 'video', page: VideoRoute.page),
+      ],
+    ),
+  ];
 }
