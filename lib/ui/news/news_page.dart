@@ -2,9 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_mvvm/gen/locale_keys.g.dart';
-import 'package:flutter_practice_mvvm/ui/core/ui/center_loading.dart';
-import 'package:flutter_practice_mvvm/ui/core/ui/error_body.dart';
+import 'package:flutter_practice_mvvm/ui/core/widgets/center_loading.dart';
+import 'package:flutter_practice_mvvm/ui/core/widgets/error_body.dart';
 import 'package:flutter_practice_mvvm/ui/news/news_view_model.dart';
+import 'package:flutter_practice_mvvm/ui/news/widgets/article_card.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 @RoutePage()
@@ -36,7 +37,7 @@ class _NewsPageState extends ConsumerState<NewsPage> {
         loading: () {
           return const CenterLoading();
         },
-        error: (error, stackTrace) {
+        error: (error, _) {
           return ErrorBody(
             error: error,
             errorMessage: LocaleKeys.news_errorMessage.tr(),
@@ -45,17 +46,12 @@ class _NewsPageState extends ConsumerState<NewsPage> {
             },
           );
         },
-        data: (data) {
+        data: (news) {
           return ListView.builder(
-            itemCount: data.articles.length,
+            itemCount: news.articles.length,
             itemBuilder: (_, index) {
-              final article = data.articles.elementAtOrNull(index)!;
-              return ListTile(
-                title: Text(article.title ?? LocaleKeys.news_noTitle.tr()),
-                subtitle: Text(
-                  article.description ?? LocaleKeys.news_noDescription.tr(),
-                ),
-              );
+              final article = news.articles[index];
+              return ArticleCard(article: article);
             },
           );
         },

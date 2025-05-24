@@ -17,11 +17,14 @@ class CodegenLoader extends AssetLoader{
   static const Map<String,dynamic> _ja_JP = {
   "errorMessage": "エラーが発生しました。もう一度お試しください。",
   "retry": "リトライ",
+  "noTitle": "タイトルなし",
+  "noDescription": "説明なし",
   "news": {
     "title": "ニュース",
-    "noTitle": "タイトルなし",
-    "noDescription": "説明なし",
     "errorMessage": "ニュースの取得に失敗しました。もう一度お試しください。"
+  },
+  "newsDetail": {
+    "title": "ニュース詳細"
   },
   "video": {
     "title": "ビデオ"
@@ -30,11 +33,14 @@ class CodegenLoader extends AssetLoader{
 static const Map<String,dynamic> _en_US = {
   "errorMessage": "An error occurred. Please try again.",
   "retry": "Retry",
+  "noTitle": "No title",
+  "noDescription": "No description",
   "news": {
     "title": "News",
-    "noTitle": "No title",
-    "noDescription": "No description",
     "errorMessage": "Failed to retrieve news. Please try again."
+  },
+  "newsDetail": {
+    "title": "News Detail"
   },
   "video": {
     "title": "Video"

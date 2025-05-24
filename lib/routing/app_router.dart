@@ -13,5 +13,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(path: 'video', page: VideoRoute.page),
       ],
     ),
+    AutoRoute(path: '/news/detail', page: NewsDetailRoute.page),
   ];
 }

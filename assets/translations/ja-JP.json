@@ -1,11 +1,14 @@
 {
   "errorMessage": "エラーが発生しました。もう一度お試しください。",
   "retry": "リトライ",
+  "noTitle": "タイトルなし",
+  "noDescription": "説明なし",
   "news": {
     "title": "ニュース",
-    "noTitle": "タイトルなし",
-    "noDescription": "説明なし",
     "errorMessage": "ニュースの取得に失敗しました。もう一度お試しください。"
+  },
+  "newsDetail": {
+    "title": "ニュース詳細"
   },
   "video": {
     "title": "ビデオ"

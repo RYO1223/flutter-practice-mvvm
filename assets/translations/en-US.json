@@ -1,11 +1,14 @@
 {
   "errorMessage": "An error occurred. Please try again.",
   "retry": "Retry",
+  "noTitle": "No title",
+  "noDescription": "No description",
   "news": {
     "title": "News",
-    "noTitle": "No title",
-    "noDescription": "No description",
     "errorMessage": "Failed to retrieve news. Please try again."
+  },
+  "newsDetail": {
+    "title": "News Detail"
   },
   "video": {
     "title": "Video"
