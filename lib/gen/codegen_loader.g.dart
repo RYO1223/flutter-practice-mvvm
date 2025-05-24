@@ -14,29 +14,31 @@ class CodegenLoader extends AssetLoader{
     return Future.value(mapLocales[locale.toString()]);
   }
 
-  static const Map<String,dynamic> _ja = {
+  static const Map<String,dynamic> _ja_JP = {
   "errorMessage": "エラーが発生しました。もう一度お試しください。",
   "retry": "リトライ",
   "news": {
     "title": "ニュース",
     "noTitle": "タイトルなし",
-    "noDescription": "説明なし"
+    "noDescription": "説明なし",
+    "errorMessage": "ニュースの取得に失敗しました。もう一度お試しください。"
   },
   "video": {
     "title": "ビデオ"
   }
 };
-static const Map<String,dynamic> _en = {
+static const Map<String,dynamic> _en_US = {
   "errorMessage": "An error occurred. Please try again.",
   "retry": "Retry",
   "news": {
     "title": "News",
     "noTitle": "No title",
-    "noDescription": "No description"
+    "noDescription": "No description",
+    "errorMessage": "Failed to retrieve news. Please try again."
   },
   "video": {
     "title": "Video"
   }
 };
-static const Map<String, Map<String,dynamic>> mapLocales = {"ja": _ja, "en": _en};
+static const Map<String, Map<String,dynamic>> mapLocales = {"ja_JP": _ja_JP, "en_US": _en_US};
 }

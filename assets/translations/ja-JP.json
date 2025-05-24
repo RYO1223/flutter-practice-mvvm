@@ -4,7 +4,8 @@
   "news": {
     "title": "ニュース",
     "noTitle": "タイトルなし",
-    "noDescription": "説明なし"
+    "noDescription": "説明なし",
+    "errorMessage": "ニュースの取得に失敗しました。もう一度お試しください。"
   },
   "video": {
     "title": "ビデオ"

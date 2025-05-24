@@ -39,6 +39,7 @@ class _NewsPageState extends ConsumerState<NewsPage> {
         error: (error, stackTrace) {
           return ErrorBody(
             error: error,
+            errorMessage: LocaleKeys.news_errorMessage.tr(),
             onRetry: () {
               viewModel.fetchNews();
             },

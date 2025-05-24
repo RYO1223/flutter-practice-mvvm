@@ -8,6 +8,7 @@ abstract class  LocaleKeys {
   static const news_title = 'news.title';
   static const news_noTitle = 'news.noTitle';
   static const news_noDescription = 'news.noDescription';
+  static const news_errorMessage = 'news.errorMessage';
   static const news = 'news';
   static const video_title = 'video.title';
   static const video = 'video';

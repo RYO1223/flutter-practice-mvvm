@@ -4,7 +4,8 @@
   "news": {
     "title": "News",
     "noTitle": "No title",
-    "noDescription": "No description"
+    "noDescription": "No description",
+    "errorMessage": "Failed to retrieve news. Please try again."
   },
   "video": {
     "title": "Video"
