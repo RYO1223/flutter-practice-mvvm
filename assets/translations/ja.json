@@ -1,3 +1,12 @@
 {
-  "hello": "こんにちは"
+  "errorMessage": "エラーが発生しました。もう一度お試しください。",
+  "retry": "リトライ",
+  "news": {
+    "title": "ニュース",
+    "noTitle": "タイトルなし",
+    "noDescription": "説明なし"
+  },
+  "video": {
+    "title": "ビデオ"
+  }
 }

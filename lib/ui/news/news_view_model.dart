@@ -15,14 +15,16 @@ class NewsViewModel extends _$NewsViewModel {
   NewsRepository get _newsRepository => ref.read(newsRepositoryProvider);
 
   Future<void> fetchNews() async {
-    state = state.copyWith(isLoading: true);
+    state = state.copyWith(news: const AsyncValue.loading());
 
     final result = await _newsRepository.getNews();
     switch (result) {
       case Ok(value: final news):
-        state = state.copyWith(isLoading: false, news: news);
-      case Err(error: _):
-        state = state.copyWith(isLoading: false);
+        state = state.copyWith(news: AsyncValue.data(news));
+      case Err(:final error):
+        state = state.copyWith(
+          news: AsyncValue.error(error, StackTrace.current),
+        );
     }
   }
 }

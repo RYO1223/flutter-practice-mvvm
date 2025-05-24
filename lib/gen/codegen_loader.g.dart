@@ -15,10 +15,28 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> _ja = {
-  "hello": "こんにちは"
+  "errorMessage": "エラーが発生しました。もう一度お試しください。",
+  "retry": "リトライ",
+  "news": {
+    "title": "ニュース",
+    "noTitle": "タイトルなし",
+    "noDescription": "説明なし"
+  },
+  "video": {
+    "title": "ビデオ"
+  }
 };
 static const Map<String,dynamic> _en = {
-  "hello": "Hello"
+  "errorMessage": "An error occurred. Please try again.",
+  "retry": "Retry",
+  "news": {
+    "title": "News",
+    "noTitle": "No title",
+    "noDescription": "No description"
+  },
+  "video": {
+    "title": "Video"
+  }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ja": _ja, "en": _en};
 }

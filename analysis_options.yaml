@@ -3,6 +3,7 @@ include: package:pedantic_mono/analysis_options.yaml
 linter:
   rules:
     sort_pub_dependencies: false
+    unnecessary_lambdas: false
 
 analyzer:
   plugins:
@@ -24,3 +25,6 @@ dart_code_metrics:
     - package:dart_code_metrics_presets/metrics_recommended.yaml
   rules:
     - unnecessary-trailing-comma: false
+    - avoid-returning-widgets: true
+    - prefer-single-widget-per-file:
+        ignore-private-widgets: true

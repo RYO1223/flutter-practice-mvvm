@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NewsPageState {
 
- bool get isLoading; News? get news;
+ AsyncValue<News> get news;
 /// Create a copy of NewsPageState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -26,16 +26,16 @@ $NewsPageStateCopyWith<NewsPageState> get copyWith => _$NewsPageStateCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NewsPageState&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.news, news) || other.news == news));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NewsPageState&&(identical(other.news, news) || other.news == news));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,isLoading,news);
+int get hashCode => Object.hash(runtimeType,news);
 
 @override
 String toString() {
-  return 'NewsPageState(isLoading: $isLoading, news: $news)';
+  return 'NewsPageState(news: $news)';
 }
 
 
@@ -46,11 +46,11 @@ abstract mixin class $NewsPageStateCopyWith<$Res>  {
   factory $NewsPageStateCopyWith(NewsPageState value, $Res Function(NewsPageState) _then) = _$NewsPageStateCopyWithImpl;
 @useResult
 $Res call({
- bool isLoading, News? news
+ AsyncValue<News> news
 });
 
 
-$NewsCopyWith<$Res>? get news;
+
 
 }
 /// @nodoc
@@ -63,26 +63,13 @@ class _$NewsPageStateCopyWithImpl<$Res>
 
 /// Create a copy of NewsPageState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? isLoading = null,Object? news = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? news = null,}) {
   return _then(_self.copyWith(
-isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
-as bool,news: freezed == news ? _self.news : news // ignore: cast_nullable_to_non_nullable
-as News?,
+news: null == news ? _self.news : news // ignore: cast_nullable_to_non_nullable
+as AsyncValue<News>,
   ));
 }
-/// Create a copy of NewsPageState
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NewsCopyWith<$Res>? get news {
-    if (_self.news == null) {
-    return null;
-  }
 
-  return $NewsCopyWith<$Res>(_self.news!, (value) {
-    return _then(_self.copyWith(news: value));
-  });
-}
 }
 
 
@@ -90,11 +77,10 @@ $NewsCopyWith<$Res>? get news {
 
 
 class _NewsPageState implements NewsPageState {
-   _NewsPageState({this.isLoading = true, this.news = null});
+   _NewsPageState({this.news = const AsyncValue<News>.loading()});
   
 
-@override@JsonKey() final  bool isLoading;
-@override@JsonKey() final  News? news;
+@override@JsonKey() final  AsyncValue<News> news;
 
 /// Create a copy of NewsPageState
 /// with the given fields replaced by the non-null parameter values.
@@ -106,16 +92,16 @@ _$NewsPageStateCopyWith<_NewsPageState> get copyWith => __$NewsPageStateCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NewsPageState&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.news, news) || other.news == news));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NewsPageState&&(identical(other.news, news) || other.news == news));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,isLoading,news);
+int get hashCode => Object.hash(runtimeType,news);
 
 @override
 String toString() {
-  return 'NewsPageState(isLoading: $isLoading, news: $news)';
+  return 'NewsPageState(news: $news)';
 }
 
 
@@ -126,11 +112,11 @@ abstract mixin class _$NewsPageStateCopyWith<$Res> implements $NewsPageStateCopy
   factory _$NewsPageStateCopyWith(_NewsPageState value, $Res Function(_NewsPageState) _then) = __$NewsPageStateCopyWithImpl;
 @override @useResult
 $Res call({
- bool isLoading, News? news
+ AsyncValue<News> news
 });
 
 
-@override $NewsCopyWith<$Res>? get news;
+
 
 }
 /// @nodoc
@@ -143,27 +129,14 @@ class __$NewsPageStateCopyWithImpl<$Res>
 
 /// Create a copy of NewsPageState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? isLoading = null,Object? news = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? news = null,}) {
   return _then(_NewsPageState(
-isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
-as bool,news: freezed == news ? _self.news : news // ignore: cast_nullable_to_non_nullable
-as News?,
+news: null == news ? _self.news : news // ignore: cast_nullable_to_non_nullable
+as AsyncValue<News>,
   ));
 }
 
-/// Create a copy of NewsPageState
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$NewsCopyWith<$Res>? get news {
-    if (_self.news == null) {
-    return null;
-  }
 
-  return $NewsCopyWith<$Res>(_self.news!, (value) {
-    return _then(_self.copyWith(news: value));
-  });
-}
 }
 
 // dart format on

@@ -1,3 +1,12 @@
 {
-  "hello": "Hello"
+  "errorMessage": "An error occurred. Please try again.",
+  "retry": "Retry",
+  "news": {
+    "title": "News",
+    "noTitle": "No title",
+    "noDescription": "No description"
+  },
+  "video": {
+    "title": "Video"
+  }
 }
