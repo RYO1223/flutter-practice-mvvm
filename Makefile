@@ -25,8 +25,7 @@ watch:
 
 .PHONY: localization
 localization:
-	dart run easy_localization:generate --source-dir ./assets/translations --output-dir ./lib/gen
-	dart run easy_localization:generate --source-dir ./assets/translations --output-dir ./lib/gen -f keys -o locale_keys.g.dart
+	dart run easy_localization_sheet
 
 .PHONY: unit-test
 unit-test:

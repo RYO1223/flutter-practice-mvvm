@@ -51,8 +51,27 @@ dev_dependencies:
   json_serializable: ^6.9.5
   retrofit_generator: ^9.2.0
   auto_route_generator: ^10.0.1
+  flutter_gen_runner: ^5.10.0
+  easy_localization_sheet: ^1.1.0
 
 flutter:
   uses-material-design: true
   assets:
+    - assets/
     - assets/translations/
+    - assets/images/
+    - assets/images/news/
+
+flutter_gen:
+  output: lib/gen
+
+  assets:
+    exclude:
+      - assets/translations/*
+
+easy_localization_sheet:
+  csv_url: "https://docs.google.com/spreadsheets/d/16EW--sPe2Gg-O77_rPaY8BFV35sft-pA5t6dlPIaU4Q/export?format=csv"
+  output_dir: "assets/translations"
+  easy_localization_generate:
+    output_dir: lib/gen
+    output_file_name: locale_keys.g.dart
